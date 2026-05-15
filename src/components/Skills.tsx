@@ -1,22 +1,25 @@
-import { motion } from 'motion/react';
-import { SKILLS } from '../constants';
+import { motion } from "motion/react";
+import { SKILLS } from "../constants";
 
 const categories = [
-  'Programming Languages', 
-  'Backend Development', 
-  'Frontend Development', 
-  'Databases', 
-  'Software Testing', 
-  'Authentication & Security', 
-  'Tools & Platforms', 
-  'Concepts'
+  "Programming Languages",
+  "Backend Development",
+  "Frontend Development",
+  "Databases",
+  "Software Testing",
+  "Authentication & Security",
+  "Tools & Platforms",
+  "Concepts",
 ];
 
 export default function Skills() {
   const repeatedSkills = [...SKILLS, ...SKILLS];
 
   return (
-    <section id="skills" className="py-32 bg-charcoal relative overflow-hidden border-y border-soft-white/5">
+    <section
+      id="skills"
+      className="py-32 bg-charcoal relative overflow-hidden border-y border-soft-white/5"
+    >
       <div className="max-w-7xl mx-auto px-6 md:px-12 mb-16">
         <span className="text-xs uppercase tracking-[0.3em] font-bold text-soft-silver mb-4 block">
           Expertise
@@ -53,25 +56,30 @@ export default function Skills() {
         </div>
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 w-full">
-            {categories.map((category) => (
-                <motion.div 
-                    key={category}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="p-8 rounded-sm bg-matte-black/40 border border-soft-white/5 backdrop-blur-sm hover:border-electric-blue/30 transition-all group"
-                >
-                    <h3 className="text-[10px] uppercase tracking-widest font-bold text-electric-blue mb-6 group-hover:text-white transition-colors">{category}</h3>
-                    <ul className="space-y-3">
-                        {SKILLS.filter(s => s.category === category).map((skill) => (
-                            <li key={skill.name} className="text-sm text-soft-white/60 font-sans flex items-center gap-3">
-                                <div className="w-1 h-1 bg-soft-white/20 rounded-full" />
-                                {skill.name}
-                            </li>
-                        ))}
-                    </ul>
-                </motion.div>
-            ))}
+          {categories.map((category) => (
+            <motion.div
+              key={category}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="p-8 rounded-sm bg-matte-black/40 border border-soft-white/5 backdrop-blur-sm hover:border-electric-blue/30 transition-all group"
+            >
+              <h3 className="text-[10px] uppercase tracking-widest font-bold text-electric-blue mb-6 group-hover:text-white transition-colors">
+                {category}
+              </h3>
+              <ul className="space-y-3">
+                {SKILLS.filter((s) => s.category === category).map((skill) => (
+                  <li
+                    key={skill.name}
+                    className="text-sm text-soft-white/60 font-sans flex items-center gap-3"
+                  >
+                    <div className="w-1 h-1 bg-soft-white/20 rounded-full" />
+                    {skill.name}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

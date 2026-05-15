@@ -1,42 +1,50 @@
-import { motion } from 'motion/react';
-import { Layout, Server, Zap, Cpu, Database, Bug } from 'lucide-react';
+import { motion } from "motion/react";
+import { Layout, Server, Zap, Cpu, Database, Bug } from "lucide-react";
 
 const services = [
   {
     title: "Full Stack Web Development",
-    description: "Modern scalable web applications using MERN Stack and Spring Boot.",
-    icon: Layout
+    description:
+      "Backend-focused scalable applications using Java Spring Boot alongside modern MERN Stack development",
+    icon: Layout,
   },
   {
     title: "Backend API Development",
-    description: "Secure, optimized, production-ready REST APIs and backend systems.",
-    icon: Server
+    description:
+      "Secure, optimized, production-ready REST APIs and backend systems.",
+    icon: Server,
   },
   {
     title: "Real-Time Applications",
-    description: "WebSockets, live updates, notifications, chat systems, and tracking systems.",
-    icon: Zap
+    description:
+      "Scalable real-time applications featuring live updates, messaging systems, and tracking workflows.",
+    icon: Zap,
   },
   {
     title: "AI Integration",
-    description: "Google Gemini API and AI-powered workflow automation.",
-    icon: Cpu
+    description:
+      "Smart workflow automation and intelligent system integration designed to simplify complex operations, improve scalability, and enhance user experience across modern web applications.",
+    icon: Cpu,
   },
   {
     title: "Database Architecture",
     description: "MongoDB and MySQL schema design and optimization.",
-    icon: Database
+    icon: Database,
   },
   {
     title: "Bug Fixing & Optimization",
-    description: "Application debugging, backend optimization, and performance improvements.",
-    icon: Bug
-  }
+    description:
+      "Application debugging, backend optimization, and performance improvements.",
+    icon: Bug,
+  },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 md:py-32 px-6 md:px-12 bg-matte-black relative overflow-hidden">
+    <section
+      id="services"
+      className="py-20 md:py-32 px-6 md:px-12 bg-matte-black relative overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -45,7 +53,9 @@ export default function Services() {
           transition={{ duration: 0.8 }}
           className="mb-20"
         >
-          <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-electric-blue mb-4 block">Services</span>
+          <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-electric-blue mb-4 block">
+            Services
+          </span>
           <h2 className="text-4xl md:text-5xl font-display font-bold uppercase tracking-tighter">
             What I Can <span className="text-soft-white/20">Build.</span>
           </h2>
@@ -62,7 +72,7 @@ export default function Services() {
               className="group p-8 rounded-sm border border-soft-white/5 bg-charcoal/30 hover:border-electric-blue/50 transition-all duration-500 relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-linear-to-br from-electric-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              
+
               <div className="relative z-10">
                 <div className="w-12 h-12 rounded-sm bg-matte-black border border-soft-white/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-electric-blue group-hover:border-electric-blue transition-all duration-500">
                   <service.icon className="w-5 h-5 text-soft-white group-hover:text-white" />

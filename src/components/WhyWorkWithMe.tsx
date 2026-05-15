@@ -1,13 +1,22 @@
-import { motion } from 'motion/react';
-import { Shield, MessageSquare, Zap, Layers, Globe, Code, Cpu, Activity } from 'lucide-react';
+import { motion } from "motion/react";
+import {
+  Shield,
+  MessageSquare,
+  Zap,
+  Layers,
+  Globe,
+  Code,
+  Cpu,
+  Activity,
+} from "lucide-react";
 
 const reasons = [
-  { title: "Scalable Architecture", icon: Layers },
-  { title: "Fast Communication", icon: MessageSquare },
-  { title: "Responsive UI", icon: Globe },
-  { title: "Real-Time Systems", icon: Zap },
-  { title: "Production-Ready APIs", icon: Shield },
+  { title: "Build Scalable Architecture", icon: Layers },
   { title: "Clean Backend Structure", icon: Code },
+  { title: "Build Production-Ready APIs", icon: Shield },
+  { title: "Fast and Efficient Communication", icon: MessageSquare },
+  { title: "Build Real-Time Systems", icon: Zap },
+  { title: "Responsive UI", icon: Globe },
   { title: "AI Integration Expertise", icon: Cpu },
   { title: "Performance Optimization", icon: Activity },
 ];
@@ -22,12 +31,16 @@ export default function WhyWorkWithMe() {
           viewport={{ once: true }}
           className="text-center mb-16 md:mb-24"
         >
-          <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-electric-blue mb-4 block">Advantages</span>
+          <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-electric-blue mb-4 block">
+            Advantages
+          </span>
           <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tighter mb-6">
-            Why Clients <span className="text-electric-blue">Work With Me.</span>
+            Why Clients{" "}
+            <span className="text-electric-blue">Work With Me.</span>
           </h2>
           <p className="max-w-2xl mx-auto text-soft-white/40 font-sans leading-relaxed">
-            I deliver high-end software solutions focused on performance, scalability, and seamless user experiences.
+            I deliver high-end software solutions focused on performance,
+            scalability, and seamless user experiences.
           </p>
         </motion.div>
 
